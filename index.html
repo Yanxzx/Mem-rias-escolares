@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Minha trajetória escolar e meu portfólio de redações.">
+  <title>Minha Trajetória Escolar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="tema-infantil">
+  <header class="cabecalho">
+    <nav class="navegacao" aria-label="Navegação principal">
+      <a class="logo" href="#inicio">Minha jornada<span>.</span></a>
+      <div class="links-nav">
+        <a href="#memorias">Memórias</a>
+        <a href="#portfolio">Redações</a>
+      </div>
+    </nav>
+
+    <div class="hero" id="inicio">
+      <span class="etiqueta">Minha história em capítulos</span>
+      <h1>Do giz de cera<br>ao <span>código.</span></h1>
+      <p>Uma viagem pelas lembranças, aprendizados e experiências que fizeram parte da minha vida escolar.</p>
+      <a class="botao" href="#memorias">Conheça minha história <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="rabisco rabisco-um" aria-hidden="true">✳</div>
+    <div class="rabisco rabisco-dois" aria-hidden="true">✎</div>
+  </header>
+
+  <main>
+    <section class="secao-memorias" id="memorias">
+      <div class="titulo-secao">
+        <span class="sobretitulo">Capítulo 01 — Minha trajetória</span>
+        <h2>Memórias escolares</h2>
+        <p>Cada fase trouxe novas descobertas, desafios e pessoas importantes.</p>
+      </div>
+
+      <div class="linha-do-tempo">
+        <article class="evento" id="jardim">
+          <div class="imagem-evento">
+            <img src="img/jardim.jpg" alt="Foto da época do Jardim de Infância"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('sem-foto');">
+            <span class="marcador-foto">01 / Começo</span>
+          </div>
+          <div class="texto-evento">
+            <span class="periodo">Primeiras descobertas</span>
+            <h3>Jardim de Infância</h3>
+            <p>Foi uma fase de brincadeiras, desenhos, novas amizades e primeiras descobertas. Aqui comecei a conhecer o ambiente escolar e a aprender coisas que seriam importantes para o meu desenvolvimento.</p>
+            <p class="lembrete">✎ Personalize: conte uma lembrança marcante, o nome de alguém importante ou uma atividade de que gostava.</p>
+          </div>
+        </article>
+
+        <article class="evento evento-invertido" id="fundamental">
+          <div class="imagem-evento">
+            <img src="img/fundamental.jpg" alt="Foto da época do Ensino Fundamental"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('sem-foto');">
+            <span class="marcador-foto">02 / Crescimento</span>
+          </div>
+          <div class="texto-evento">
+            <span class="periodo">Novos conhecimentos</span>
+            <h3>Ensino Fundamental</h3>
+            <p>Nessa etapa, aprendi conteúdos novos, desenvolvi minha leitura e escrita e passei por diferentes experiências. Também construí amizades e comecei a descobrir melhor meus interesses.</p>
+            <p class="lembrete">✎ Personalize: acrescente uma conquista, uma dificuldade que superou ou uma memória especial.</p>
+          </div>
+        </article>
+
+        <article class="evento" id="medio">
+          <div class="imagem-evento">
+            <img src="img/medio.jpg" alt="Foto da época do Ensino Médio"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('sem-foto');">
+            <span class="marcador-foto">03 / Futuro</span>
+          </div>
+          <div class="texto-evento">
+            <span class="periodo">Preparação para novos caminhos</span>
+            <h3>Ensino Médio</h3>
+            <p>O Ensino Médio representa uma fase de amadurecimento e preparação para o futuro. Aprendi a lidar com novas responsabilidades, conheci assuntos diferentes e tive contato com a programação, que ampliou minha visão sobre tecnologia.</p>
+            <p class="lembrete">✎ Personalize: conte o que mais mudou em você e quais são seus planos depois da escola.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao-portfolio" id="portfolio">
+      <div class="titulo-secao titulo-portfolio">
+        <span class="sobretitulo">Capítulo 02 — Produções</span>
+        <h2>Portfólio de redações</h2>
+        <p>Uma coleção de textos produzidos durante as aulas de Língua Portuguesa e Redação.</p>
+      </div>
+
+      <div class="barra-portfolio">
+        <span><strong id="contador-redacoes">15</strong> textos no portfólio</span>
+        <span class="dica">Selecione um cartão para abrir a redação</span>
+      </div>
+      <div class="grid-redacoes" id="lista-redacoes">
+        <!-- Os 15 cartões são criados pelo JavaScript. -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p class="frase-final">“Cada etapa deixa aprendizados que ajudam a construir os próximos caminhos.”</p>
+    <p>Desenvolvido por <strong>[Seu nome]</strong> · 2026</p>
+    <a href="#inicio">Voltar ao início ↑</a>
+  </footer>
+
+  <div class="modal" id="modal-leitura" aria-hidden="true">
+    <div class="modal-fundo" data-fechar="true"></div>
+    <section class="modal-conteudo" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <button class="fechar-modal" type="button" aria-label="Fechar janela">×</button>
+      <span class="modal-ano" id="modal-ano"></span>
+      <h2 id="modal-titulo">Título da redação</h2>
+      <div class="modal-texto" id="modal-texto"></div>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
